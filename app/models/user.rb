@@ -6,4 +6,6 @@ class User < ApplicationRecord
          :confirmable, :trackable
          
   validates :email, uniqueness: true
+
+  has_many :contests
 end
