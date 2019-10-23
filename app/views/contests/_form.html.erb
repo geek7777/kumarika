@@ -1,16 +1,27 @@
-
-<%= simple_form_for(@contest) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.file_field :image %>
-    <%= f.input :description %>
-    <%= f.association :user ,as: :hidden %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<div class="row justify-content-center">
+  <%= simple_form_for(@contest) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="col-md-12 col-lg-12">
+      <form>
+        <div class="form-group">
+          <%= f.input :name,
+                      label: false,
+                      placeholder: 'Name',
+                      :class=>"form-control"%>
+        </div>
+          <%= f.file_field :image %>
+        <br><br>
+        <div class="form-group">
+          <%= f.input :description,
+                      label: false,
+                      placeholder: 'Description',
+                      :class=>"form-control",
+                      :cols=>'8'%>
+        </div>
+        <%= f.association :user ,as: :hidden %>
+        <%= f.button :submit ,:class=>"btn btn-success btn-block"%>
+      </form>
+      </div>
+  <% end %>
+</div>

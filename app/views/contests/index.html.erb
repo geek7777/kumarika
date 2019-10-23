@@ -5,7 +5,9 @@
         <%= image_tag(contest.image.url,:class=>"card-img-top", :size=>"120x260") %>
         <div class="card-body">
           <h5 class="card-title"><%= contest.name %></h5>
-          <%= link_to "Click Here", contest ,:class=>"btn btn-success"%>
+          <small>Created <%= time_ago_in_words(contest.created_at)%> ago</small>
+          <br>
+          <%= link_to "Click Here", contest ,:class=>"btn btn-light"%>
         </div>
       </div>
     </div>

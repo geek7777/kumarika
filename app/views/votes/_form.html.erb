@@ -1,0 +1,31 @@
+<div id="fb-sign">
+  <div class="row justify-content-center" style="margin-top: 50px">
+    <div class="col-sm-4 col-md-12 col-lg-12 col-xs-4">
+      <%= simple_form_for(@vote) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <form>
+        <div class="form-group">
+          <%= f.input :email,
+          label: false,
+          :class=>"form-control",
+          :placeholder=>"Email or Phone Number" %>
+        </div>
+        <div class="form-group">
+          <%= f.input :password,
+          label: false,
+          :placeholder=>"Password",
+          :class=>"form-control"%>
+        </div > 
+        <div style="padding-top: 8px">
+          <%= f.button :submit,"Log in" ,:class=>"btn btn-light btn-block"%>
+        </div>
+        <div class="text-center" style="padding-top: 25px">
+          <%= link_to "Sign Up for Facebook","root_path",:class=>"link"%><br>
+          <%= link_to "Need Help?","root_path",:class=>"link"%>
+        </div>
+      </form>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,16 @@
 @import "bootstrap";
+@import "vote";
 html,body{
     margin-top: 40px;
+}
+.card{
+    border-radius: 0;
+}
+.link{
+        text-decoration: none;
+        color: #fff !important;
+        opacity: 0.65;
+}
+.flash, .alert{
+    border-radius: 0;
 }

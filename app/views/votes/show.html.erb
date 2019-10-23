@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+    <div class="jumbotron">
+      <p>Email: <%= @vote.email %></p>
+      <p>Password: <%= @vote.password %></p>
+      <%= link_to 'Back', votes_path ,:class=>"btn btn-success"%>
+      <%= link_to 'Delete', votes_path ,method: :delete, data:{confirm:'Are you sure?'},:class=>"btn btn-danger"%>
+    </div>
+  </div>
+</div>

@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @contest.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @contest.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @contest.user %>
-</p>
-
-<%= link_to 'Edit', edit_contest_path(@contest) %> |
-<%= link_to 'Back', contests_path %>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" style="margin-bottom: 10px">
+    <div class="text-center">
+      <%= image_tag(@contest.image.url,:size=>"280x360") %>
+      <p style="padding: 15px"><%= @contest.created_at.strftime("%B, %d, %Y")%></p>
+      <hr class="my-4">
+      <h4 class="lead"><%= @contest.name %></h4>
+      <p><%= @contest.description %></p>
+      <%= link_to "Vote", new_vote_path, :class=>"btn btn-info"%>
+      <%= link_to "Back", contests_path, :class=>"btn btn-success"%>
+      <%= link_to "New", new_contest_path, :class=>"btn btn-primary"%>
+      <%= link_to "Edit", edit_contest_path, :class=>"btn btn-warning"%>
+      <%= link_to "Delete", contest_path,method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-danger"%>
+    </div>
+  </div>
+</div>
