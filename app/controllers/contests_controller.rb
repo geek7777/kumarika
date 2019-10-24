@@ -56,7 +56,7 @@ class ContestsController < ApplicationController
   def destroy
     @contest.destroy
     respond_to do |format|
-      format.html { redirect_to contests_url, notice: 'Contest was successfully destroyed.' }
+      format.html { redirect_to contests_url }
       format.json { head :no_content }
     end
   end
