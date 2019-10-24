@@ -7,9 +7,17 @@
         <div class="form-group">
           <%= f.input :name,
                       label: false,
-                      placeholder: 'Name',
+                      placeholder: 'Contest Name',
                       :class=>"form-control"%>
         </div>
+        <div class="form-group">
+        <%= f.input :actor,
+                      label: false,
+                      placeholder: 'Actor Name',
+                      :class=>"form-control"%>
+        </div>
+        <%= f.file_field :image %>
+        <br><br>
         <div class="form-group">
           <%= f.input :description,
                       label: false,

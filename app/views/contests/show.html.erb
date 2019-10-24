@@ -2,7 +2,7 @@
   <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" style="margin-bottom: 10px">
     <div class="text-center">
       <%= image_tag(@contest.image.url,:size=>"280x360") %>
-      <p style="padding: 15px"><%= @contest.created_at.strftime("%B, %d, %Y")%></p>
+      <p style="padding: 15px"><%= @contest.actor %></p>
       <hr class="my-4">
       <h4 class="lead"><%= @contest.name %></h4>
       <p><%= @contest.description %></p>
