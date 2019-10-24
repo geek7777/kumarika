@@ -1,8 +1,8 @@
-<div class="row justify-content-center">
-  <%= simple_form_for(@contest) do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-    <div class="col-md-12 col-lg-12">
+<div class="row justify-content-center" style="margin-top:40px">
+    <div class="col-sm-4 col-xs-4 col-md-8 col-lg-8">
+      <%= simple_form_for(@contest) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
       <form>
         <div class="form-group">
           <%= f.input :name,
@@ -10,18 +10,15 @@
                       placeholder: 'Name',
                       :class=>"form-control"%>
         </div>
-          <%= f.file_field :image %>
-        <br><br>
         <div class="form-group">
           <%= f.input :description,
                       label: false,
                       placeholder: 'Description',
                       :class=>"form-control",
-                      :cols=>'8'%>
+                      input_html:{rows: 8}%>
         </div>
-        <%= f.association :user ,as: :hidden %>
-        <%= f.button :submit ,:class=>"btn btn-success btn-block"%>
+        <%= f.button :submit,"Create",:class=>"btn btn-info btn-block"%>
       </form>
-      </div>
+    </div>
   <% end %>
 </div>

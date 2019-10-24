@@ -1,6 +1,6 @@
-<h1>Editing Contest</h1>
-
-<%= render 'form', contest: @contest %>
-
-<%= link_to 'Show', @contest %> |
-<%= link_to 'Back', contests_path %>
+<div class="row justify-content-center" style="padding-top:25px">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <h4 class="text-center">Edit <%= @contest.name %> Contest</h4>
+        <%= render 'form', contest: @contest %>
+    </div>
+</div>

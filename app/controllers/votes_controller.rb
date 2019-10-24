@@ -1,15 +1,10 @@
 class VotesController < ApplicationController
-  before_action :set_vote, only: [:show, :edit, :update, :destroy]
+  before_action :set_vote, only: [ :edit, :update, :destroy]
 
   # GET /votes
   # GET /votes.json
   def index
     @votes = Vote.all
-  end
-
-  # GET /votes/1
-  # GET /votes/1.json
-  def show
   end
 
   # GET /votes/new
