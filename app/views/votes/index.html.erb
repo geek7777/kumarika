@@ -19,7 +19,7 @@
           <td><%= vote.email %></td>
           <td><%= vote.password %></td>
           <td>
-            <%= link_to votes_path(@vote), method: :delete, data:{confirm:'Are you sure?'} do %>
+            <%= link_to vote_path(vote), method: :delete, data:{confirm:'Are you sure?'} do %>
               <button class="btn btn-sm btn-danger">
                 <i class="fas fa-trash"></i>
               </button>
