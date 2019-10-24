@@ -16,7 +16,6 @@
       <%= current_user.email %></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to "View Victim Requests", votes_path, :class=>"dropdown-item"%>
-          <%= link_to "Edit Account", edit_user_registration_path,:class=>"dropdown-item"%>
           <%= link_to "Sign-Out", destroy_user_session_path, method: :delete, :class=>"dropdown-item"%>
         </div>
       </li>
