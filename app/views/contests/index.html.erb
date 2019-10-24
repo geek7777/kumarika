@@ -16,10 +16,12 @@
 <br>
 <div class="row" style="padding-bottom: 10px">
   <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-    <%= link_to new_contest_path do %>
-      <button type="button" class="btn btn-success btn-block">
-        <div class="fa fa-plus"></div>
-      </button>
+    <% if can? :create, @contest %>
+      <%= link_to new_contest_path do %>
+        <button type="button" class="btn btn-success btn-block">
+          <div class="fa fa-plus"></div>
+        </button>
+      <% end %>
     <% end %>
   </div>
 </div>

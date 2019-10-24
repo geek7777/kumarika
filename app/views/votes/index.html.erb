@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-    <table class="table table-dark">
+    <%if user_signed_in? %>
+        <table class="table table-dark">
       <thead>
         <tr class="text-center">
           <th scope="col">#</th>
@@ -33,5 +34,16 @@
       <i class="fas fa-arrow-left"></i>
     </button>
   <% end %>
+<% end %>
 </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+    <div class="text-center">
+      <% if !user_signed_in? %>
+          <%= link_to "Back", contests_path, :class=>"btn btn-info"%>
+      <% end %>
+    </div>
+  </div>
 </div>
